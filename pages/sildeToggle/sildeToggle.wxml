@@ -1,0 +1,10 @@
+<view class="btn" bindtap="sildeToggle">点击</view>
+
+<view class="silde {{ open? 'open':'' }}">
+  <view class="aaa {{ open? 'bbb':'' }}">
+    <block wx:for="{{ 10 }}" wx:key="{{ index }}">
+      <view class="item">{{ index }}</view>
+    </block>
+  </view>
+  
+</view>

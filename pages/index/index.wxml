@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view class="navigator-arrow"></view>
+  <view class="font">底部固定、上部滚动</view>
+  <view class="font">侧栏滚动</view>
+  <view class="font">弹窗组件</view>
+  <view class="font">弹出层组件</view>
+  <view class="font">超出隐藏文本</view>
+  <view class="font">轮播点的样式</view>
+  <view class="font">使用阿里云图标</view>
+</view>
